@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreBoard</title>
+    <link rel="icon" type="image/x-icon" href="pho/icon.png">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<style>
+    body{
+        align-items: center;
+        text-align: center;
+        background-color: #1C2833 ;
+        color: azure;
+    }
+    h1{
+        color: azure;
+        font-size: 10vw;
+        margin-bottom: 0%;
+    }
+    #main-content{
+        margin-top: 10%;
+        color: azure;
+        font-size: 3vw;
+    }
+    .table{
+        
+        /* margin: 5vw; */
+        color: azure;
+    }
+    #back{
+        position: absolute;
+        left: 1vw;
+        top: 1vw;
+    }
+    
+</style>
+<body>
+    <button id="back" type="button" class="btn btn-outline-light btn-lg" onclick="back()">Back</button>
+    <h1>Score Board</h1>
+    <hr>
+    <!-- <button type="submit" class="btn btn-primary h-50" onclick="SelecAllData()">
+        <i class="bi bi-arrow-clockwise"> update</i>
+    </button> -->
+    <!-- <div id="main-content">
+        
+        <label class="form-check-label">XXXXX</label>
+        
+    </div> -->
+    <table class="table table-borderless">
+        <thead thead-dark>
+            <tr >
+                <th scope="col">#</th>
+                <!-- <th scope="col">Username</th> -->
+                <th scope="col">Email</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody id="tbody1">
+            
+        </tbody>
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBo9QWgzp-t9KunYaukc4LdkL2tkumbrzc",
+            authDomain: "projectmastercall-239a6.firebaseapp.com",
+            databaseURL: "https://projectmastercall-239a6-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "projectmastercall-239a6",
+            storageBucket: "projectmastercall-239a6.appspot.com",
+            messagingSenderId: "922845410394",
+            appId: "1:922845410394:web:9710a5c2aba5554ff35463",
+            measurementId: "G-FKXN4FJNJV"
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="read_data.js"></script>
+</body>
+</html>
